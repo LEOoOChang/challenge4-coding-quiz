@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#quiz {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#choices button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#choices button:hover {
+    background-color: #ddd;
+}
+
+#results {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#results h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#results p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#results form {
+    display: inline-block;
+}
+
+#results label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#results input[type="text"] {
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#results button[type="submit"] {
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#results button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+
+
