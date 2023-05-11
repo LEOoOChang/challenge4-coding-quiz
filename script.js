@@ -60,3 +60,49 @@ function startQuiz() {
     }
   }, 1000);
 }  
+
+// Function to display a question
+function displayQuestion() {
+    // Get the current question
+    const question = quiz[currentQuestion];
+    // Display the question
+    questionEl.textContent = question.question;
+    // Display the choices
+    choicesEl.innerHTML = "";
+    question.choices.forEach(choice => {
+      const choiceEl = document.createElement("button");
+      choiceEl.textContent = choice;
+      choiceEl.addEventListener("click", () => {
+        // Check if the answer is correct
+        if (choice === question.answer) {
+          correctAnswers++;
+        }
+        // Display the next question or end the quiz
+        currentQuestion++;
+        if (currentQuestion < quiz.length) {
+          displayQuestion();
+        } else {
+          endQuiz();
+        }
+      });
+      choicesEl.appendChild(choiceEl);
+    });
+}
+  
+  // Function to end the quiz
+function endQuiz() {
+    clearInterval(timerId);
+    // Hide the question and choices elements
+    quizEl.style.display = "none";
+    // Display the results element
+    resultsEl.style.display = "block";
+    // Calculate the score
+    const percentage = Math.round(correctAnswers / quiz.length * 100);
+    scoreEl.textContent = `${percentage}%`;
+    // Save the score to local storage
+    submitBtn.addEventListener("click", () => {
+      const scores = JSON.parse(localStorage.getItem("scores")) || [];
+      scores.push({ initials: initialsEl.value, score });
+      localStorage.setItem("scores", JSON.stringify(scores));
+    });
+}
