@@ -42,14 +42,9 @@ let correctAnswers = 0;
 let timeLeft = 60;
 let timerId;
 
-// Add event listener to the start button
 startBtn.addEventListener("click", startQuiz);
-
-// Function to start the quiz
 function startQuiz() {
-  // Hide the start button
   startBtn.style.display = "none";
-  // Display the first question
   displayQuestion();
   // Start the timer
   timerId = setInterval(() => {
@@ -63,11 +58,8 @@ function startQuiz() {
 
 // Function to display a question
 function displayQuestion() {
-    // Get the current question
     const question = quiz[currentQuestion];
-    // Display the question
     questionEl.textContent = question.question;
-    // Display the choices
     choicesEl.innerHTML = "";
     question.choices.forEach(choice => {
       const choiceEl = document.createElement("button");
@@ -77,7 +69,7 @@ function displayQuestion() {
         if (choice === question.answer) {
           correctAnswers++;
         }
-        // Display the next question or end the quiz
+        
         currentQuestion++;
         if (currentQuestion < quiz.length) {
           displayQuestion();
@@ -85,6 +77,7 @@ function displayQuestion() {
           endQuiz();
         }
       });
+      
       choicesEl.appendChild(choiceEl);
     });
 }
@@ -92,9 +85,7 @@ function displayQuestion() {
   // Function to end the quiz
 function endQuiz() {
     clearInterval(timerId);
-    // Hide the question and choices elements
     quizEl.style.display = "none";
-    // Display the results element
     resultsEl.style.display = "block";
     // Calculate the score
     const percentage = Math.round(correctAnswers / quiz.length * 100);
