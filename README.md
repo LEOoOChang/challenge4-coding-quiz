@@ -7,4 +7,13 @@ This coding quiz is a simple and classic JavaScript application that is designed
 This application is programmed with responsive user interface so that it is applicable on devices with any size.
 
 ## Screenshots
-![start-the-quiz](https://github.com/LEOoOChang/challenge4-coding-quiz/blob/main/assets/Screenshot%202023-05-11%20at%206.04.27%20PM.png)
+
+1. ![start-the-quiz](https://github.com/LEOoOChang/challenge4-coding-quiz/blob/main/assets/Screenshot%202023-05-11%20at%206.04.27%20PM.png)
+
+2. ![run-the-quiz](https://github.com/LEOoOChang/challenge4-coding-quiz/blob/main/assets/Screenshot%202023-05-11%20at%206.04.50%20PM.png)
+
+3. ![finish-the-quiz](https://github.com/LEOoOChang/challenge4-coding-quiz/blob/main/assets/Screenshot%202023-05-11%20at%206.05.28%20PM.png)
+
+## Link to deployed application
+
+https://leooochang.github.io/challenge4-coding-quiz/
