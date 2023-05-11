@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coding quiz</title>
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<script src="script.js"></script>    
+  <div class="container"> 
+    <h1>Coding Quiz</h1>
+    <p>Time remaining: <span id="timer">60</span> seconds</p>
+    <div id="quiz">
+    <div id="question"></div>
+    <div id="choices"></div>
+    </div>
+    <div id="results" style="display: none;">
+    <h2>All Done!</h2>
+    <p>Your Score is <span id="score"></span></p>
+    <form>
+        <label for="initials">My Initials:</label>
+        <input type="text" id="initials" name="initials">
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+    <button id="start">Start Quiz</button>
+    <script src="script.js"></script>
+  </div> 
 </body>
-</html>  
+</html> 
